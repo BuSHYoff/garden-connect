@@ -3,22 +3,22 @@
     <div class="hamburger-button" @click="toggleMenu">
       <span :class="{ open: isOpen }">&#9776;</span>
     </div>
-
+     
     <div class="menu-wrapper" :class="{ open: isOpen }">
       <div class="menu">
-        <a href="/">Accueil</a>
+        <RouterLink to="/" @click="closeMenu">Accueil</RouterLink>
         <div class="divider"></div>
-        <a href="/tracking-precision">Suivi précis et personnalisable</a>
+        <RouterLink to="/tracking-precision" @click="closeMenu">Suivi précis et personnalisable</RouterLink>
         <div class="divider"></div>
-        <a href="/modular-solution">Solution modulaire</a>
+        <RouterLink to="/modular-solution" @click="closeMenu">Solution modulaire</RouterLink>
         <div class="divider"></div>
-        <a href="/financial-accessibility">Accessibilité financière</a>
+        <RouterLink to="/financial-accessibility" @click="closeMenu">Accessibilité financière</RouterLink>
         <div class="divider"></div>
-        <a href="/opensource-approach">Approche open source</a>
+        <RouterLink to="/opensource-approach" @click="closeMenu">Approche open source</RouterLink>
         <div class="divider"></div>
-        <a href="/accessibility-tools">Outils accessibles</a>
+        <RouterLink to="/accessibility-tools" @click="closeMenu">Outils accessibles</RouterLink>
         <div class="divider"></div>
-        <a href="/scalability">Évolutivité et possibilités futures</a>
+        <RouterLink to="/scalability" @click="closeMenu">Évolutivité et possibilités futures</RouterLink>
       </div>
     </div>
   </div>
@@ -37,6 +37,12 @@ const toggleMenu = () => {
   } else {
     body.classList.remove('menu-open')
   }
+}
+
+const closeMenu = () => {
+  isOpen.value = false
+  const body = document.body
+  body.classList.remove('menu-open')
 }
 </script>
 
@@ -94,6 +100,16 @@ const toggleMenu = () => {
   text-decoration: none;
   color: #F8F0ED;
   font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #C7E8CA;
+}
+
+.menu a.router-link-active {
+  color: #C7E8CA;
+  font-weight: 600;
 }
 
 .divider {

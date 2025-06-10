@@ -19,43 +19,43 @@ const teamMembers = ref([
   {
     name: 'Mohamed Azdoud',
     role: 'Développeur Mobile / Web',
-    quote: '« Une serre connectée qui répond aux enjeux technologiques actuels est un grand atout pour le maraîchage. »',
+    quote: '« Des outils connectés pour faciliter le travail des maraîchers »',
     image: mohamedImg,
   },
   {
     name: 'Léo Verger',
     role: 'Développeur Backend',
-    quote: '« Grâce aux capteurs, nous pouvons mieux anticiper les besoins des cultures. »',
+    quote: '« On fait gagner du temps aux agris, et ça, c\'est cool ! »',
     image: leoImg,
   },
   {
     name: 'Denys Navarro',
     role: 'Ingénieur IoT',
-    quote: '« L’interface a été pensée pour les agriculteurs, pas les ingénieurs. »',
+    quote: '« Bio + Techno = L\'agriculture de demain »',
     image: denysImg,
   },
   {
     name: 'Benjamin Couet',
     role: 'Designer UI/UX',
-    quote: '« L’interface a été pensée pour les agriculteurs, pas les ingénieurs. »',
+    quote: '« Une visibilité claire pour une gestion simplifié »',
     image: benjaminImg,
   },
   {
     name: 'Paul Favreau',
     role: 'Ingénieur IoT',
-    quote: '« L’interface a été pensée pour les agriculteurs, pas les ingénieurs. »',
+    quote: '« Une solution accessible et ouvert à tous pour aider les agriculteurs au quotidien »',
     image: paulImg,
   },
   {
     name: 'Matthieu Deroir',
     role: 'Ingénieur IoT',
-    quote: '« L’interface a été pensée pour les agriculteurs, pas les ingénieurs. »',
+    quote: '« Dans un contexte aussi instable, l\'enjeu de la souveraineté alimentaire est primordial. »',
     image: matthieuImg,
   },
   {
     name: 'Gaëtean Pecqueux',
     role: 'Cheffe de projet',
-    quote: '« L’interface a été pensée pour les agriculteurs, pas les ingénieurs. »',
+    quote: '« Simplifier la gestion des cultures pour une agriculture plus durable et accessible. »',
     image: gaetanImg,
   },
 ])
@@ -185,7 +185,7 @@ onBeforeUnmount(() => {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: absolute;
   width: 85%;
   transition: opacity 0.5s ease, transform 0.5s ease;
